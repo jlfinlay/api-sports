@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jl.db.mapper.TAccessorderMapper">
+
+    <update id="gupdateStatusById">
+        Update T_AccessOrder Set OrderState = 1,ReasonCode=12 Where ID= #{id}
+    </update>
+    <update id="updateAccessOrderById">
+        Update T_AccessOrder Set OrderState = 0 Where ID= #{id}
+    </update>
+    <update id="eupdateAccessOrderById">
+        Update T_AccessOrder Set OrderState = 1,ReasonCode=-1 Where ID= #{id}
+    </update>
+    <update id="supdateAccessOrderById">
+        Update T_AccessOrder Set OrderState = 1,ReasonCode=13 Where ID=#{id}
+    </update>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jl.db.mapper.TyAccountInfoMapper">
+    <update id="addUserScore">
+        UPDATE ty_account_info
+        SET score = score + #{money}
+        WHERE user_id = #{userId}
+    </update>
+
+    <update id="subtractUserScore">
+        UPDATE ty_account_info
+        SET score = score - #{money}
+        WHERE user_id = #{userId}
+    </update>
+
+    <select id="getGameId" resultType="java.lang.Integer">
+        SELECT NEXTVAL('SeqGameID') as gameId
+    </select>
+
+
+</mapper>
